@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         var spref=getPreferences(Context.MODE_PRIVATE)
         //initially when first run app it has default colori.e white
-     spref.getInt("COLOR",Color.WHITE)
-
+     val color=spref.getInt("COLOR",Color.WHITE)
+        llbackground.setBackgroundColor(color);
 
         fun saveColor(color: Int) {
             var editor=spref.edit();
